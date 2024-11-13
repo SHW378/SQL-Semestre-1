@@ -18,8 +18,8 @@ ID_Estudiante int unique foreign key references Estudiante(ID)
 )
 go
 
--- 1-* Un estudiante puede tener varias inscripciones en varios años 
-create table Inscripción (
+-- 1-* Un estudiante puede tener varias inscripciones en varios aï¿½os 
+create table Inscripciï¿½n (
 ID int primary key not null identity (1,1),
 FechaInscripcion date,
 ID_Estudiante int foreign key references Estudiante(ID)
@@ -33,7 +33,7 @@ NombreAsignatura varchar(50)
 go
 
 create table Inscripcion_Asignatura (
-Id_Inscripcion int foreign key references Inscripción(ID),
+Id_Inscripcion int foreign key references Inscripciï¿½n(ID),
 Id_Asignatura int foreign key references Asignatura(ID),
 )
 go
